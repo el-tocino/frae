@@ -24,7 +24,7 @@ uploadname = '%s.jpg' % uploadhash
 ## upload file to gcp...
 
 client = storage.Client()
-bucket = client.get_bucket('pi-labeled')
+bucket = client.get_bucket('labelmaker')
 blob2 = bucket.blob('incoming/%s' % uploadname)
 blob2.upload_from_filename(filename='foo.jpg')
 
@@ -32,11 +32,11 @@ os.remove('foo.jpg')
 
 ### construct gs uri
 
-newURI = 'gs://pi-labeled/incoming/%s' % uploadname
+newURI = 'gs://labelmaker/incoming/%s' % uploadname
 
 ## get labels
 
-vision_client = vision.Client(project='pimag-175006')
+vision_client = vision.Client(project='lablemaker')
 image = vision_client.image(source_uri = newURI)
 labels = image.detect_labels()
 print('Labels:')
