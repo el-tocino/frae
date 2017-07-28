@@ -20,17 +20,17 @@ Check api manager to make sure cloud storage is enabled. This appears to be the 
 
 Google's gcloud and gsutil tools can be run on a pi, though they no longer package them for ARM architecture.
 
-sudo pip install google-cloud
-mkdir ~/tmp
-cd ~/tmp
+ - sudo pip install google-cloud
+ - mkdir ~/tmp
+ - cd ~/tmp
 (versions will change this was just the current as of whenever this was created)
-wget https://dl.google.com/dl/cloudsdk/channels/rapid/downloads/google-cloud-sdk-164.0.0-linux-x86.tar.gz
-tar xfz google-cloud-sdk-164.0.0-linux-x86.tar.gz
-cd google-cloud-sdk
+ - wget https://dl.google.com/dl/cloudsdk/channels/rapid/downloads/google-cloud-sdk-164.0.0-linux-x86.tar.gz
+ - tar xfz google-cloud-sdk-164.0.0-linux-x86.tar.gz
+ - cd google-cloud-sdk
 
-Then run....
-1. python lib/gcloud.py components install beta app-engine-python
-2. python lib/gcloud.py auth login
-3. python lib/gcloud.py beta auth application-default login
-4. python lib/gcloud.py config set project $PROJECT_NAME_FROM_ABOVE
+To run without constantly authenticating, use the following:
+ - python lib/gcloud.py components install beta app-engine-python
+ - python lib/gcloud.py auth login
+ - python lib/gcloud.py beta auth application-default login
+ - python lib/gcloud.py config set project $PROJECT_NAME_FROM_ABOVE
 
