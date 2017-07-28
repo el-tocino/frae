@@ -29,8 +29,8 @@ tar xfz google-cloud-sdk-164.0.0-linux-x86.tar.gz
 cd google-cloud-sdk
 
 Then run....
- - python lib/gcloud.py components install beta app-engine-python
- - python lib/gcloud.py auth login
- - python lib/gcloud.py beta auth application-default login
- - python lib/gcloud.py config set project $PROJECT_NAME_FROM_ABOVE
+1. python lib/gcloud.py components install beta app-engine-python
+2. python lib/gcloud.py auth login
+3. python lib/gcloud.py beta auth application-default login
+4. python lib/gcloud.py config set project $PROJECT_NAME_FROM_ABOVE
 
