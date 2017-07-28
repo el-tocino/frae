@@ -8,7 +8,7 @@ Via PiCamera, snap a picture. Generate a hash from resulting pic (sha256), uploa
 
 # Future
 
-Separate the steps into individual pieces to limit memory footprint of each piece and make them more granularly usable (ie, batch jobs, delayed labeling, etc). 
+Separate the steps into individual pieces to limit memory footprint of each piece and make them more granularly usable (ie, batch jobs, delayed labeling, etc). Save results to a DB for referencable future use.
 
 # Things
 
